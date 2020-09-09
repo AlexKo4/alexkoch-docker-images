@@ -8,8 +8,6 @@ RUN mkdir /allure-config
 RUN apk update && \
 apk add unzip
 
-
-
 RUN wget https://dl.bintray.com/qameta/maven/io/qameta/allure/allure-commandline/2.9.0/allure-commandline-2.9.0.zip
 RUN unzip allure-commandline-2.9.0.zip -d /allure
 RUN rm allure-commandline-2.9.0.zip
