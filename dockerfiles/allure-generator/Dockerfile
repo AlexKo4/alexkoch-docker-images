@@ -1,12 +1,11 @@
-FROM digitalgenius/alpine-node-java:latest
+FROM timbru31/java-node:8-jre
 
 RUN mkdir /allure
 RUN mkdir /allure-results
 RUN mkdir /allure-report
 RUN mkdir /allure-config
 
-RUN apk update && \
-apk add unzip
+RUN apt-get update && apt-get install unzip && apt-get install wget
 
 RUN wget https://dl.bintray.com/qameta/maven/io/qameta/allure/allure-commandline/2.9.0/allure-commandline-2.9.0.zip
 RUN unzip allure-commandline-2.9.0.zip -d /allure
